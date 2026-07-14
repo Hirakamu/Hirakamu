@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hirakamu</title>
+<meta name="description" content="Hirakamu — student and developer building web, mobile, and infrastructure projects." />
+<style>
+  :root {
+    --bg: #fafaf9;
+    --fg: #1c1c1a;
+    --muted: #6b6b66;
+    --line: #e5e5e0;
+    --accent: #3a5a40;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #efeeec;
+      --muted: #9a9a94;
+      --line: #2a2a27;
+      --accent: #8fb996;
+      --card: #191918;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  header.hero {
+    padding: 120px 0 64px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.1;
+    margin: 0 0 20px;
+    letter-spacing: -0.02em;
+    font-weight: 650;
+  }
+  .lede {
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0;
+  }
+  section {
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+  }
+  section h2 {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 0 0 28px;
+  }
+  .about p {
+    font-size: 17px;
+    margin: 0 0 16px;
+    max-width: 62ch;
+  }
+  .about p:last-child { margin-bottom: 0; }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .project {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 22px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .project:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .project-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .project-name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .project-lang {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .project-desc {
+    font-size: 14.5px;
+    color: var(--muted);
+    margin: 0;
+  }
+  .note {
+    font-size: 14.5px;
+    color: var(--muted);
+    margin: 20px 0 0;
+    padding-top: 4px;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  .skill {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    background: var(--card);
+  }
+  .skill strong {
+    display: block;
+    font-size: 14.5px;
+    margin-bottom: 2px;
+  }
+  .skill span {
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .contact-links a {
+    color: var(--fg);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .contact-links a:hover {
+    border-color: var(--accent);
+    background: var(--card);
+  }
+  footer {
+    padding: 40px 0 60px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="eyebrow">Hirakamu</div>
+      <h1>Student by day,<br />systems builder by habit.</h1>
+      <p class="lede">
+        I'm Hirakamu — a student in Indonesia who spends most of the time not in class
+        building the software that runs behind the scenes: school platforms, small bots,
+        and infrastructure I host myself just to see if I can.
+      </p>
+    </header>
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>
+        Over the past two years I've quietly become the person who builds and maintains
+        the digital side of my school, SMAN 2 Cikarang Pusat — the website, an LMS
+        frontend, backend services, and a mobile app for the school's digital innovation
+        program. None of it started as a class project; it started because something
+        needed to exist and I was the one willing to build it.
+      </p>
+      <p>
+        Outside of school work, I run my own Minecraft server node network, keep a
+        growing "script bank" of setup and automation tooling, and build small bots for
+        communities I'm part of. I'm comfortable moving between TypeScript, Python, C++,
+        Dart, and shell — whatever the problem actually needs.
+      </p>
+    </section>
+
+    <section class="work" id="work">
+      <h2>Projects</h2>
+      <div class="projects">
+        <a class="project" href="https://github.com/Hirakamu/SMAN-2-Website" target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="project-name">SMAN-2-Website</span>
+            <span class="project-lang">Python</span>
+          </div>
+          <p class="project-desc">Collection of SMAN 2 Cikarang Pusat's web structure.</p>
+        </a>
+        <a class="project" href="https://github.com/Hirakamu/smandacikpus" target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="project-name">smandacikpus</span>
+            <span class="project-lang">HTML</span>
+          </div>
+          <p class="project-desc">Shared workspace and web tooling for the school.</p>
+        </a>
+        <a class="project" href="https://github.com/Hirakamu/mcnode-survival" target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="project-name">mcnode-survival</span>
+            <span class="project-lang">Shell</span>
+          </div>
+          <p class="project-desc">My own Minecraft survival server node network — self-hosted, self-managed.</p>
+        </a>
+        <a class="project" href="https://github.com/Hirakamu/gabutgaming-bot" target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="project-name">gabutgaming-bot</span>
+            <span class="project-lang">TypeScript</span>
+          </div>
+          <p class="project-desc">A bot built for a gaming community I'm part of.</p>
+        </a>
+        <a class="project" href="https://github.com/Hirakamu/script-bank" target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="project-name">script-bank</span>
+            <span class="project-lang">Shell</span>
+          </div>
+          <p class="project-desc">A growing collection of setup and automation scripts for whatever comes up.</p>
+        </a>
+      </div>
+      <p class="note">
+        There's more running privately — an LMS frontend, backend services, and a Flutter
+        app for the school's digital innovation program — that isn't public yet.
+      </p>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2>Skills &amp; interests</h2>
+      <div class="skills-grid">
+        <div class="skill"><strong>TypeScript</strong><span>bots, backends, frontends</span></div>
+        <div class="skill"><strong>Python</strong><span>APIs &amp; tooling</span></div>
+        <div class="skill"><strong>Dart / Flutter</strong><span>mobile apps</span></div>
+        <div class="skill"><strong>C++</strong><span>systems-level work</span></div>
+        <div class="skill"><strong>Shell</strong><span>automation, provisioning</span></div>
+        <div class="skill"><strong>Self-hosting</strong><span>servers &amp; infra</span></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="mailto:hirakamu@hirakamu.my.id">hirakamu@hirakamu.my.id</a>
+        <a href="https://github.com/Hirakamu" target="_blank" rel="noopener">github.com/Hirakamu</a>
+      </div>
+    </section>
+
+    <footer>&copy; 2026 Hirakamu.</footer>
+  </main>
+</body>
+</html>
